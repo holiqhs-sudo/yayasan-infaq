@@ -1,0 +1,8 @@
+{
+  "name": "Yayasan Infaq Malaysia (YIM)",
+  "description": "Laman web rasmi profil Yayasan Infaq Malaysia, sebuah NGO yang khusus memartabatkan golongan Asnaf melalui pendidikan dan kebajikan.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

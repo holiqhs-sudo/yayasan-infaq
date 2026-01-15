@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Yayasan Infaq Malaysia - Official Website
 
-# Run and deploy your AI Studio app
+This repository contains the source code for the official website of Yayasan Infaq Malaysia, a non-profit organization dedicated to supporting the Asnaf community in Malaysia and internationally.
 
-This contains everything you need to run your app locally.
+The website is a single-page application (SPA) built with React and Tailwind CSS, providing information about the foundation's mission, programs, and ways to get involved.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Zt1kf69oqy9pPLZ9CX_CmB1fTg6KpGjY
+## Features
 
-## Run Locally
+The website is composed of several pages/sections:
 
-**Prerequisites:**  Node.js
+*   **Homepage:** An engaging introduction to the foundation with key statistics, featured programs, and a call-to-action for donations.
+*   **Kenali Kami (About Us):** Provides detailed information about the foundation's background, board of trustees, and partners.
+*   **Program Utama (Main Programs):** Outlines the core initiatives: Pendidikan (Education), Kebajikan (Welfare), and Dana Khas (Special Funds).
+*   **Kerja Kami (Our Work):** Showcases the foundation's portfolio and latest news, including thumbnails for news items and mockup images.
+*   **Sertai Kami (Join Us):** A dedicated section for corporate sponsors and individuals who wish to volunteer, with clear calls-to-action and links to registration forms.
+*   **Hubungi Kami (Contact Us):** A comprehensive contact page with an interactive form, office address, Google Maps integration, and other contact details.
 
+## Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+*   **Framework:** React
+*   **Language:** TypeScript
+*   **Styling:** Tailwind CSS
+*   **Icons:** Lucide React
+
+## Running Locally
+
+**Prerequisites:** [Node.js](https://nodejs.org/) installed on your machine.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd <repository-folder>
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:3000` (or another port if specified).
+
+## Deployment
+
+This project can be deployed to any static site hosting provider.

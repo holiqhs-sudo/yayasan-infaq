@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 import { ChevronRight } from 'lucide-react';
 
 const KerjaKami = () => {

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 import { Building, Users, ArrowRight, Handshake, Heart, Star, ShieldCheck, FileText, Map, Camera } from 'lucide-react';
 
 const SertaiKami = () => {

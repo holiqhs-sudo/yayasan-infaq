@@ -20,12 +20,12 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
-import KenaliKamiPage from './KenaliKami';
-import ProgramUtama from './ProgramUtama';
-import KerjaKami from './KerjaKami';
-import SertaiKami from './SertaiKami';
-import HubungiKami from './HubungiKami';
-import Footer from './Footer';
+import KenaliKamiPage from './pages/KenaliKami';
+import ProgramUtama from './pages/ProgramUtama';
+import KerjaKami from './pages/KerjaKami';
+import SertaiKami from './pages/SertaiKami';
+import HubungiKami from './pages/HubungiKami';
+import Footer from './components/Footer';
 
 // --- Types ---
 interface NavLinkProps {

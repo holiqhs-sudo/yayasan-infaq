@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, Facebook, Clock, Send } from 'lucide-react';
 
 const HubungiKami = () => {

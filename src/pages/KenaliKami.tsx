@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { CheckCircle, Users, Briefcase, Award, Shield, Target } from 'lucide-react';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 const MengenaiKami: React.FC = () => (
   <div className="space-y-12 animate-fade-in-up">

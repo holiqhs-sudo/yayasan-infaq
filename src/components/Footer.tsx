@@ -5,6 +5,8 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react'
 const LOGO_URL = "dist/assets/logo-yayasan-infaq-malaysia.png";
 
 const Footer: React.FC = () => (
+
+  
     <footer id="hubungi" className="bg-slate-50 pt-24 pb-12 border-t border-slate-100">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">

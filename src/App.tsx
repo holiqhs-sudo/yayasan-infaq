@@ -26,6 +26,7 @@ import KerjaKami from './pages/KerjaKami';
 import SertaiKami from './pages/SertaiKami';
 import HubungiKami from './pages/HubungiKami';
 import Footer from './components/Footer';
+import BlogList from './components/BlogList'; 
 
 // --- Types ---
 interface NavLinkProps {
@@ -48,7 +49,7 @@ interface ProgramProps {
 }
 
 // --- Logo Constant ---
-const LOGO_URL = "dist/assets/logo-yayasan-infaq-malaysia.png";
+const LOGO_URL = "/assets/logo-yayasan-infaq-malaysia.png";
 
 // --- Components ---
 
@@ -185,7 +186,7 @@ const HomePage: React.FC = () => (
           <div className="flex-1 relative w-full lg:w-auto">
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl ring-8 ring-white/50 border-2 border-white">
               <img 
-                src="dist/assets/hero-infaq-foundation-2025.jpeg" 
+                src="/assets/hero-infaq-foundation-2025.jpeg" 
                 alt="Asnaf Community Support" 
                 className="w-full h-auto object-cover aspect-[4/5] lg:aspect-auto"
               />
@@ -297,7 +298,7 @@ const HomePage: React.FC = () => (
     <section id="sertai" className="py-28">
       <div className="container mx-auto px-6">
         <div className="bg-primary rounded-[3rem] p-12 lg:p-24 text-center relative overflow-hidden shadow-3xl">
-          <img src="dist/assets/moslem-happy-mother-and-son.png" alt="Happy mother and son" className="absolute bottom-0 right-0 w-1/4" />
+          <img src="/assets/moslem-happy-mother-and-son.png" alt="Happy mother and son" className="absolute bottom-0 right-0 w-1/4" />
           <div className="relative z-10 max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight font-heading">
               Setiap sumbangan infaq anda amatlah bermakna
@@ -312,6 +313,22 @@ const HomePage: React.FC = () => (
         </div>
       </div>
     </section>
+
+    {/* Blog Section */}
+    <section className="py-28 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block font-body">
+            Berita & Artikel
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight font-heading">
+            Berita Terkini
+          </h2>
+        </div>
+        <BlogList />
+      </div>
+    </section>
+
     <Footer />
   </>
 );

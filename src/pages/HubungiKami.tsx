@@ -96,7 +96,7 @@ const HubungiKami = ({ setPage }: { setPage?: (page: string) => void }) => {
                     <Phone className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-slate-800">{t('hubungiKami.telefonKLabel')}</h4>
-                      <a href="tel:+60174277775" className="text-primary hover:underline">+60 17 427 7775</a>
+                      <a href="tel:+601742777751" className="text-primary hover:underline">+6017 4277 7751</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

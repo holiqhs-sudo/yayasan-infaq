@@ -114,7 +114,7 @@ const Footer: React.FC<FooterProps> = ({ setPage }) => {
               </li>
               <li className="flex items-center gap-5 text-slate-700 font-extrabold text-base lg:text-lg">
                 <Phone size={20} className="text-primary shrink-0" />
-                <a href="tel:+601742777751" className="hover:text-primary transition-colors">+6017 4277 7751</a>
+                <a href="tel:+60174277751" className="hover:text-primary transition-colors">+6017 4277 751</a>
               </li>
               <li className="flex items-center gap-5 text-slate-700 font-extrabold text-base lg:text-lg">
                 <Mail size={20} className="text-primary shrink-0" />

@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // GANTI dengan URL WordPress Anda
-const WORDPRESS_URL = 'https://infaqfoundation.org';
+const WORDPRESS_URL = 'https://web.infaqfoundation.org';
 const API_BASE = `${WORDPRESS_URL}/wp-json/wp/v2`;
 
 // Interface untuk tipe data Post

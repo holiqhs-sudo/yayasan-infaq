@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { 
   Heart, 
   GraduationCap, 
@@ -54,7 +53,7 @@ const VIDEO_GALLERY = [
     id: 0,
     title: "Misi Agihan Tanzania",
     src: "/assets/Agihan-Tanzania-Yayasan-Infaq-Maysia.mp4",
-    thumbnail: "/assets/thumb-video1.png"
+    thumbnail: "/assets/thumb-video1.png" // Ganti dengan path thumbnail asli
   },
   {
     id: 1,
@@ -109,7 +108,6 @@ const ProgramCard: React.FC<ProgramProps> = ({ icon, title, description }) => (
 );
 
 const Navbar: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) => {
-  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -119,96 +117,25 @@ const Navbar: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (page: string) => {
-    setPage(page);
-    setIsOpen(false);
-  };
-
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'ms' ? 'en' : 'ms');
-  };
-
-  const navPages = [
-    { key: 'home', label: t('navbar.home') },
-    { key: 'kenali-kami', label: t('navbar.kenaliKami') },
-    { key: 'program-utama', label: t('navbar.programUtama') },
-    { key: 'kerja-kami', label: t('navbar.kerjaKami') },
-    { key: 'sertai-kami', label: t('navbar.sertaiKami') },
-    { key: 'hubungi-kami', label: t('navbar.hubungiKami') },
-  ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" onClick={() => handleNavClick('home')} className="block h-10 lg:h-14">
+           <a href="#" onClick={() => setPage('home')} className="block h-10 lg:h-14">
             <img src={LOGO_URL} alt="Logo" className="h-full w-auto" />
           </a>
         </div>
-        
-        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8">
-          {navPages.map((p) => (
-            <NavLink key={p.key} href="#" onClick={() => setPage(p.key)}>{p.label}</NavLink>
+          {['home', 'kenali-kami', 'program-utama', 'kerja-kami', 'sertai-kami', 'hubungi-kami'].map((p) => (
+            <NavLink key={p} href="#" onClick={() => setPage(p)}>{p.replace('-', ' ')}</NavLink>
           ))}
         </div>
-        
-        {/* Desktop: Language Toggle + CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 border-2 border-primary text-primary px-4 py-2 rounded-2xl font-bold text-sm hover:bg-accent transition-all"
-          >
-            {i18n.language === 'ms' ? '🇬🇧 EN' : '🇲🇾 BM'}
-          </button>
-          <a href="https://www.billplz.com/infaqfoundation" target="_blank">
-            <button className="bg-primary text-white px-8 py-3 rounded-2xl font-extrabold hover:bg-secondary transition-all text-sm uppercase">
-              {t('navbar.infaqSekarang')}
-            </button>
-        </a>
-        </div>
-        
-        {/* Hamburger Button */}
+        <button className="hidden lg:block bg-primary text-white px-8 py-3 rounded-2xl font-extrabold hover:bg-secondary transition-all text-sm uppercase">
+          Infaq Sekarang
+        </button>
         <button className="lg:hidden text-primary" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      <div 
-        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="container mx-auto px-6 py-6 bg-white/95 backdrop-blur-md mt-2 rounded-3xl shadow-xl">
-          <div className="flex flex-col gap-4">
-            {navPages.map((p) => (
-              <a
-                key={p.key}
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(p.key);
-                }}
-                className="text-slate-700 hover:text-primary hover:bg-accent/30 font-bold transition-all font-body text-sm uppercase tracking-wide cursor-pointer px-4 py-3 rounded-xl"
-              >
-                {p.label}
-              </a>
-            ))}
-            {/* Mobile: Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="border-2 border-primary text-primary px-8 py-3 rounded-2xl font-bold text-sm hover:bg-accent transition-all"
-            >
-              {i18n.language === 'ms' ? '🇬🇧 Switch to English' : '🇲🇾 Tukar ke BM'}
-            </button>
-            <a href="https://www.billplz.com/infaqfoundation" target="_blank">
-              <button className="bg-primary text-white px-8 py-3 rounded-2xl font-extrabold hover:bg-secondary transition-all text-sm uppercase mt-2">
-                {t('navbar.infaqSekarang')}
-              </button>
-            </a>
-          </div>
-        </div>
       </div>
     </nav>
   );
@@ -216,12 +143,12 @@ const Navbar: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) => {
 
 // --- Main Pages ---
 
-const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) => {
-  const { t } = useTranslation();
+const HomePage: React.FC = () => {
   const [activeVideoIdx, setActiveVideoIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Fungsi Toggle Play/Pause
   const togglePlay = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -233,6 +160,7 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
     }
   };
 
+  // Fungsi Ganti Video
   const handleVideoChange = (index: number) => {
     setActiveVideoIdx(index);
     setIsPlaying(false);
@@ -246,6 +174,7 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
     <>
       {/* Hero Section */}
       <section className="relative pt-36 pb-20 lg:pt-52 lg:pb-36 overflow-hidden">
+        {/* Background Decorative Circles */}
         <div className="absolute top-0 right-0 -z-10 w-2/5 h-full bg-accent rounded-l-[200px] opacity-40" />
         <div className="absolute top-1/4 -left-20 -z-10 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full" />
         
@@ -253,40 +182,40 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="flex-1 text-center lg:text-left">
               <span className="inline-block bg-accent text-primary px-6 py-2 rounded-full text-[10px] font-black tracking-[0.3em] mb-8 font-body border border-primary/10 uppercase">
-                {t('hero.badge')}
+                NGO Berdaftar & Telus
               </span>
               <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-[1.2] mb-8 font-heading">
-                {t('hero.title')} <span className="text-primary assertive-line">{t('hero.titleHighlight')}</span>
+                Bersama Membina Harapan Melalui <span className="text-primary assertive-line">Pendidikan & Kebajikan</span>
               </h1>
               <p className="text-lg lg:text-xl text-slate-600 mb-10 max-w-2xl lg:mx-0 mx-auto leading-relaxed font-body font-medium">
-                {t('hero.description')}
+                Yayasan Infaq Malaysia bertekad mentransformasi kehidupan asnaf melalui pemerkasaan pendidikan yang mampan dan bantuan kebajikan yang adil.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
-                
-                <a href="https://www.billplz.com/infaqfoundation" target="_blank">
-                  <button className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-base hover:bg-secondary transition-all shadow-2xl flex items-center gap-3 font-body uppercase tracking-wider">
-                    <Wallet size={20} /> {t('hero.btnInfaq')}
-                  </button>
-                </a>
-               
+                <button className="w-full sm:w-auto bg-primary text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-secondary hover:scale-105 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-3 font-body uppercase tracking-wider">
+                  <Wallet size={20} /> Infaq Sekarang
+                </button>
+                <button className="w-full sm:w-auto bg-white border-2 border-slate-200 text-slate-800 px-10 py-4 rounded-2xl font-bold text-lg hover:border-primary hover:text-primary transition-all active:scale-95 flex items-center justify-center gap-3 font-body uppercase tracking-wider">
+                  Jadi Sukarelawan <ArrowRight size={20} />
+                </button>
               </div>
             </div>
-
-            <div className="flex-1 relative">
-              <div className="w-full max-w-md lg:max-w-none mx-auto">
+            <div className="flex-1 relative w-full lg:w-auto">
+              <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl ring-8 ring-white/50 border-2 border-white">
                 <img 
                   src="/assets/hero-infaq-foundation-2025.jpeg" 
-                  alt="Helping children" 
-                  className="rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.15)] relative z-10 rotate-0 hover:rotate-2 transition-transform duration-500"
+                  alt="Asnaf Community Support" 
+                  className="w-full h-auto object-cover aspect-[4/5] lg:aspect-auto"
                 />
-                <div className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce" style={{ animationDuration: '4s' }}>
-                  <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white shadow-lg">
-                    <Heart size={24} fill="currentColor" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-black text-slate-900 leading-none font-body">98%</p>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest font-body mt-1">{t('hero.statLabel')}</p>
-                  </div>
+              </div>
+              
+              {/* Floating Stat Widget */}
+              <div className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-50 flex items-center gap-4 animate-bounce" style={{ animationDuration: '4s' }}>
+                <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white shadow-lg">
+                  <Heart size={24} fill="currentColor" />
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-slate-900 leading-none font-body">98%</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest font-body mt-1">Dana Diagihkan</p>
                 </div>
               </div>
             </div>
@@ -295,14 +224,22 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-center text-3xl font-bold text-slate-900 mb-12 font-heading">{t('stats.title')}</h2>
+      <section id="kenali" className="py-24 bg-accent/40 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
+            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-8 font-heading uppercase tracking-tight">Ringkasan YIM</h2>
+            <div className="relative group">
+               <p className="text-xl lg:text-2xl text-slate-800 leading-relaxed font-heading italic font-medium px-4 relative z-10">
+                “Yayasan Infaq Malaysia (YIM) diasaskan sebagai sebuah NGO yang khusus memartabatkan golongan Asnaf di Malaysia dan antarabangsa. Moto kami adalah <span className="text-primary font-black not-italic border-b-4 border-secondary/20">Semuanya untuk Asnaf</span>.”
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StatCard icon={<Heart />} value="1,200" suffix="+" label={t('stats.penerima')} />
-            <StatCard icon={<MapPin />} value="500" suffix="+" label={t('stats.penerima')} />
-            <StatCard icon={<Globe />} value="8" label={t('stats.negara')} />
-            <StatCard icon={<Users />} value="50" suffix="+" label={t('stats.sukarelawan')} />
+            <StatCard icon={<Users />} value="2,610" label="Jumlah Penerima" />
+            <StatCard icon={<Wallet />} value="207,715" suffix="RM" label="Dana Diagihkan" />
+            <StatCard icon={<Globe />} value="10" label="Negara Terlibat" />
+            <StatCard icon={<MapPin />} value="76" label="Lokasi Program" />
           </div>
         </div>
       </section>
@@ -312,29 +249,29 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-end justify-between mb-20 gap-10">
             <div className="max-w-2xl text-center lg:text-left">
-              <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block font-body">{t('program.eyebrow')}</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight font-heading">{t('program.title')}</h2>
+              <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block font-body">Visi Masa Hadapan</span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight font-heading">Sorotan Program Utama</h2>
             </div>
             <p className="text-slate-500 font-bold max-w-md font-body text-base lg:text-lg leading-relaxed border-l-4 border-primary/20 pl-8">
-              {t('program.subtitle')}
+              Strategi bantuan kami dirangka untuk memberikan impak berkekalan bagi memutus rantaian kemiskinan.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <ProgramCard 
               icon={<GraduationCap size={32} />}
-              title={t('program.pendidikan.title')}
-              description={t('program.pendidikan.description')}
+              title="Pendidikan"
+              description="Inisiatif pendidikan strategik bagi anak-anak asnaf untuk memastikan mereka tidak tercicir daripada sistem pendidikan nasional."
             />
             <ProgramCard 
               icon={<HandHeart size={32} />}
-              title={t('program.kebajikan.title')}
-              description={t('program.kebajikan.description')}
+              title="Kebajikan"
+              description="Bantuan holistik bagi keluarga miskin, warga emas, OKU, dan anak yatim untuk kelangsungan hidup yang lebih bermaruah."
             />
             <ProgramCard 
               icon={<Wallet size={32} />}
-              title={t('program.dana.title')}
-              description={t('program.dana.description')}
+              title="Dana Khas"
+              description="Tabung respons pantas bagi bantuan kecemasan, bencana alam, dan pembiayaan program asnaf bersasar."
             />
           </div>
         </div>
@@ -344,8 +281,8 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
       <section className="py-28 bg-slate-900 text-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold font-heading mb-4">{t('video.title')}</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">{t('video.subtitle')}</p>
+            <h2 className="text-4xl lg:text-5xl font-bold font-heading mb-4">Kisah Benar: Dari Asnaf Kepada Berdikari</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Di sebalik setiap angka, terdapat wajah yang penuh harapan. Tonton perjalanan transformatif penerima manfaat kami.</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -360,6 +297,7 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
                   onClick={togglePlay}
                 />
                 
+                {/* Overlay Play Button */}
                 {!isPlaying && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/40 transition-opacity">
                     <button 
@@ -371,16 +309,17 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
                   </div>
                 )}
 
+                {/* Indikator Judul Video Aktif */}
                 <div className="absolute bottom-6 left-8 bg-black/60 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
-                  <p className="text-sm font-bold text-primary uppercase tracking-widest">{t('video.nowPlaying')} <span className="text-white ml-2">{VIDEO_GALLERY[activeVideoIdx].title}</span></p>
+                  <p className="text-sm font-bold text-primary uppercase tracking-widest">Sekarang Diputar: <span className="text-white ml-2">{VIDEO_GALLERY[activeVideoIdx].title}</span></p>
                 </div>
               </div>
             </div>
 
-            {/* Playlist */}
+            {/* Playlist/Thumbnails */}
             <div className="flex-1 w-full flex flex-col gap-4">
               <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                <ChevronRight className="text-primary" /> {t('video.otherVideos')}
+                <ChevronRight className="text-primary" /> Video Lainnya
               </h3>
               {VIDEO_GALLERY.map((vid, index) => (
                 <button 
@@ -404,11 +343,15 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
                     <h4 className={`font-bold leading-tight ${activeVideoIdx === index ? 'text-primary' : 'text-white'}`}>
                       {vid.title}
                     </h4>
-                    <p className="text-xs text-slate-500 mt-1 uppercase tracking-tighter">{t('video.org')}</p>
+                    <p className="text-xs text-slate-500 mt-1 uppercase tracking-tighter">Yayasan Infaq Malaysia</p>
                   </div>
                 </button>
               ))}
             </div>
+
+           
+         
+
           </div>
         </div>
       </section>
@@ -420,16 +363,14 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
             <img src="/assets/moslem-happy-mother-and-son.png" alt="Happy mother and son" className="absolute bottom-0 right-0 w-1/4" />
             <div className="relative z-10 max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight font-heading">
-                {t('cta.title')}
+                Setiap sumbangan infaq anda amatlah bermakna
               </h2>
               <p className="text-accent/90 text-xl lg:text-2xl mb-12 font-heading font-medium italic">
-                {t('cta.quote')}
+                “Menceriakan Hari-Hari Golongan Asnaf yang Memerlukan...”
               </p>
-              <a href="https://www.billplz.com/infaqfoundation" target="_blank">
-                <button className="bg-white text-primary px-12 py-5 rounded-2xl font-black text-xl hover:bg-accent hover:scale-105 transition-all shadow-2xl flex items-center gap-4 mx-auto font-body uppercase tracking-widest animate-bounce">
-                  <Wallet size={24} /> {t('cta.btn')}
-                </button>
-              </a>
+              <button className="bg-white text-primary px-12 py-5 rounded-2xl font-black text-xl hover:bg-accent hover:scale-105 transition-all shadow-2xl flex items-center gap-4 mx-auto font-body uppercase tracking-widest">
+                <Wallet size={24} /> Infaq Sekarang
+              </button>
             </div>
           </div>
         </div>
@@ -440,17 +381,17 @@ const HomePage: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) =>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs mb-4 block font-body">
-              {t('blog.eyebrow')}
+              Berita & Artikel
             </span>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight font-heading">
-              {t('blog.title')}
+              Berita Terkini
             </h2>
           </div>
           <BlogList />
         </div>
       </section>
 
-      <Footer setPage={setPage} />
+      <Footer />
     </>
   );
 };
@@ -464,12 +405,12 @@ export default function App() {
       <Navbar setPage={setPage} />
       
       <main>
-        {page === 'home' && <HomePage setPage={setPage} />}
-        {page === 'kenali-kami' && <KenaliKamiPage activeSubMenu={activeSubMenu} setActiveSubMenu={setActiveSubMenu} setPage={setPage} />}
-        {page === 'program-utama' && <ProgramUtama setPage={setPage} />}
-        {page === 'kerja-kami' && <KerjaKami setPage={setPage} />}
-        {page === 'sertai-kami' && <SertaiKami setPage={setPage} />}
-        {page === 'hubungi-kami' && <HubungiKami setPage={setPage} />}
+        {page === 'home' && <HomePage />}
+        {page === 'kenali-kami' && <KenaliKamiPage activeSubMenu={activeSubMenu} setActiveSubMenu={setActiveSubMenu} />}
+        {page === 'program-utama' && <ProgramUtama />}
+        {page === 'kerja-kami' && <KerjaKami />}
+        {page === 'sertai-kami' && <SertaiKami />}
+        {page === 'hubungi-kami' && <HubungiKami />}
       </main>
 
       {/* Floating WA Button */}

@@ -1,0 +1,20 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import en from './locales/en/translation.json';
+import ms from './locales/ms/translation.json';
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: { translation: en },
+      ms: { translation: ms }
+    },
+    lng: 'ms',           // bahasa default
+    fallbackLng: 'en',   // fallback jika terjemahan tidak ada
+    interpolation: {
+      escapeValue: false
+    }
+  });
+
+export default i18n;

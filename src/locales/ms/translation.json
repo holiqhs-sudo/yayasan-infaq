@@ -1,0 +1,235 @@
+{
+  "navbar": {
+    "home": "Utama",
+    "kenaliKami": "Kenali Kami",
+    "programUtama": "Program Utama",
+    "kerjaKami": "Kerja Kami",
+    "sertaiKami": "Sertai Kami",
+    "hubungiKami": "Hubungi Kami",
+    "infaqSekarang": "Infaq Sekarang",
+    "hubungiKamiTooltip": "Hubungi Kami"
+  },
+  "hero": {
+    "badge": "NGO Berdaftar & Telus",
+    "title": "Bersama Membina Harapan Melalui",
+    "titleHighlight": "Pendidikan & Kebajikan",
+    "description": "Yayasan Infaq Malaysia berkomitmen memberdayakan golongan asnaf dengan program pendidikan dan kebajikan yang berimpak tinggi untuk masa depan yang lebih cerah.",
+    "btnInfaq": "Infaq Sekarang",
+    "btnKenali": "Kenali Kami",
+    "statLabel": "Dana Diagihkan"
+  },
+  "stats": {
+    "title": "Impak Nyata Dalam Angka",
+    "penerima": "Penerima Manfaat",
+    "negara": "Negara Dibantu",
+    "sukarelawan": "Sukarelawan Aktif"
+  },
+  "program": {
+    "eyebrow": "Visi Masa Hadapan",
+    "title": "Sorotan Program Utama",
+    "subtitle": "Strategi bantuan kami dirangka untuk memberikan impak berkekalan bagi memutus rantaian kemiskinan.",
+    "pendidikan": {
+      "title": "Pendidikan",
+      "description": "Inisiatif pendidikan strategik bagi anak-anak asnaf untuk memastikan mereka tidak tercicir daripada sistem pendidikan nasional."
+    },
+    "kebajikan": {
+      "title": "Kebajikan",
+      "description": "Bantuan holistik bagi keluarga miskin, warga emas, OKU, dan anak yatim untuk kelangsungan hidup yang lebih bermaruah."
+    },
+    "dana": {
+      "title": "Dana Khas",
+      "description": "Tabung respons pantas bagi bantuan kecemasan, bencana alam, dan pembiayaan program asnaf bersasar."
+    }
+  },
+  "video": {
+    "title": "Kisah Benar: Dari Asnaf Kepada Berdikari",
+    "subtitle": "Di sebalik setiap angka, terdapat wajah yang penuh harapan. Tonton perjalanan transformatif penerima manfaat kami.",
+    "nowPlaying": "Sekarang Diputar:",
+    "otherVideos": "Video Lainnya",
+    "org": "Yayasan Infaq Malaysia"
+  },
+  "cta": {
+    "title": "Setiap sumbangan infaq anda amatlah bermakna",
+    "quote": "\"Menceriakan Hari-Hari Golongan Asnaf yang Memerlukan...\"",
+    "btn": "Infaq Sekarang"
+  },
+  "blog": {
+    "eyebrow": "Berita & Artikel",
+    "title": "Berita Terkini"
+  },
+  "hubungiKami": {
+    "pageTitle": "Hubungi Kami",
+    "pageSubtitle": "Kami sedia membantu. Sila tinggalkan pesanan atau lawati kami di pejabat urusan.",
+    "formTitle": "Hantarkan Mesej",
+    "formSubtitle": "Isi borang di bawah dan kami akan menghubungi anda semula.",
+    "namaLabel": "Nama Penuh",
+    "namaPH": "cth: Ahmad bin Abdullah",
+    "emailLabel": "Alamat Emel",
+    "emailPH": "cth: ahmad@mail.com",
+    "telefonLabel": "No. Telefon",
+    "telefonPH": "cth: 012-3456789",
+    "tujuanLabel": "Tujuan",
+    "tujuan1": "Pertanyaan Am",
+    "tujuan2": "Penajaan Korporat",
+    "tujuan3": "Pendaftaran Sukarelawan",
+    "tujuan4": "Lain-lain",
+    "pesananLabel": "Pesanan Anda",
+    "pesananPH": "Tuliskan mesej anda di sini...",
+    "btnHantar": "Hantar Pesanan",
+    "infoTitle": "Maklumat Perhubungan",
+    "alamatLabel": "Alamat Pejabat",
+    "alamatNama": "Yayasan Infaq Malaysia (871868-H)",
+    "alamatDetail": "T3-03-03, Menara 3 Maju Link, Jln Lingkaran Tengah 2, Bandar Tasik Selatan, 57000 Kuala Lumpur",
+    "waktuLabel": "Waktu Operasi",
+    "waktuDetail": "Isnin - Jumaat, 9am - 5pm",
+    "emailKLabel": "Email",
+    "telefonKLabel": "No. Telefon",
+    "facebookLabel": "Facebook"
+  },
+  "kenaliKami": {
+    "sidebarTitle": "Kenali Kami",
+    "menuMengenai": "Mengenai Kami",
+    "menuVisiMisi": "Visi Misi",
+    "menuLembaga": "Lembaga Amanah",
+    "mengenai": {
+      "title": "MENGENAI KAMI",
+      "tagline": "\"Semuanya untuk Asnaf\"",
+      "p1": "Yayasan Infaq Malaysia (YIM) diasaskan sebagai sebuah NGO yang khusus memartabatkan golongan Asnaf di Malaysia dan antarabangsa.",
+      "p2": "YIM adalah sebuah madah yang segar dan sesuai dengan permintaan masyarakat bagi mengkoordinasi dan membantu golongan Asnaf yang berkeperluan.",
+      "p3": "Kami beriltizam menjadi pelopor dalam sektor pendidikan, membawakan kepakaran bertaraf dunia kepada pelajar di Malaysia, selari dengan visi Kementerian Pendidikan Negara: \"Pendidikan Berkualiti, Insan Terdidik, Negara Sejahtera\".",
+      "dasarTitle": "Dasar Kami",
+      "dasar": ["Integriti", "Komprehensif", "Kualiti", "Glokal", "Praktikal"],
+      "programTitle": "Program Utama Kami",
+      "programList": ["Kompleks Wakaf", "Pendidikan", "Akikah & Qurban", "Katering"]
+    },
+    "visiMisi": {
+      "title": "VISI, MISI & OBJEKTIF",
+      "visiTitle": "Visi",
+      "visiText": "Menjadi penyelaras pendidikan dan kebajikan yang terkemuka sebagai NGO untuk Malaysia dan dunia.",
+      "misiTitle": "Misi Kami",
+      "misi": [
+        "Menyalurkan bantuan umum kepada Asnaf kanak-kanak.",
+        "Menawarkan solusi praktikal dan berimpak besar.",
+        "Mengkoordinasikan sumber sedia ada secara efisien.",
+        "Melahirkan masyarakat yang saling bantu-membantu."
+      ],
+      "objektifTitle": "Objektif Kami",
+      "objektif": [
+        "Menyediakan Pendidikan Berkualiti",
+        "Membangunkan Program Kebajikan Berimpak Tinggi",
+        "Menyediakan Bantuan Kecemasan dan Pemulihan",
+        "Mengukuhkan Kerjasama Strategik"
+      ]
+    },
+    "lembaga": {
+      "title": "LEMBAGA AMANAH",
+      "ahli1Name": "Prof Dr Azmuddin Ibrahim",
+      "ahli1Role": "Pengerusi, Yayasan Infaq Malaysia",
+      "ahli1Quote": "\"Alhamdulillah, YIM terus komited menyalurkan program berimpak tinggi kepada seluruh warga Asnaf. Sokongan dari semua pihak amat kami hargai.\"",
+      "ahli2Name": "Dato' Aminuddin Hj. Che Hassan",
+      "ahli2Role": "Ahli Lembaga Amanah",
+      "ahli2Quote": "\"Saya yakin YIM adalah wadah segar yang mampu menerajui sektor pendidikan, selari dengan visi Kementerian Pendidikan Negara.\""
+    }
+  },
+  "programUtama": {
+    "title": "PROGRAM UTAMA",
+    "pendidikan": {
+      "title": "Program Pendidikan dan Projek Sekolah Wakaf Yayasan Infaq Malaysia",
+      "items": [
+        "Pendidikan bertaraf antarabangsa",
+        "Biasiswa pendidikan",
+        "Persediaan Pra-Universiti",
+        "Penempatan Universiti Dunia",
+        "Asrama dalam Bandar"
+      ],
+      "desc": "Pendidikan merupakan modal insan utama di dalam inisiatif untuk membina negara maju. Yayasan Infaq Malaysia mengambil langkah proaktif di dalam membawa kepakaran seluruh dunia kepada Asnaf kanak-kanak yang berada di Malaysia terutamanya. Bimbingan bersepadu dan komprehensif diberikan sewaktu dan selepas waktu sekolah. Ini amat penting bagi kami di dalam membina syahsiah yang padu bagi persiapan generasi baru bagi menghadapi dunia yang penuh mencabar dan persaingan."
+    },
+    "qurban": {
+      "title": "Ibadah Akikah & Qurban Yayasan Infaq Malaysia",
+      "items": [
+        "Agihan tempatan atau di luar negara",
+        "Pakej siap masak & agihan ke Masjid @ Pusat Asnaf Kanak-kanak (PAKK)",
+        "Pakej lawatan pendek di negara sembelihan"
+      ],
+      "desc": "Ibadah Akikah dan Qurban telah sebati di dalam masyarakat Malaysia. Yayasan Infaq Malaysia (YIM) menyediakan pakej akikah tempatan di mana agihan dibuat kepada golongan Asnaf yang paling memerlukan iaitu, Asnaf Kanak-kanak. YIM juga menyediakan pakej qurban/akikah luar negara bagi mana-mana peserta yang ingin membuat lawatan pendek ke negara berkenaan."
+    },
+    "makanan": {
+      "title": "Agihan Makanan Panas ke Asnaf Yayasan Infaq Malaysia",
+      "items": [
+        "Agihan makanan untuk 30,000 Asnaf Kanak-kanak di Lembah Kelang",
+        "5 Jenis Kaffarah & 7 Jenis Fidyah",
+        "Katering & Kenduri Kahwin bersama Asnaf Kanak-kanak"
+      ],
+      "desc": "Yayasan Infaq Malaysia juga menawarkan agihan makanan panas (siap masak) kepada golongan sasar Asnaf Kanak-kanak di seluruh Kuala Lumpur dan Selangor. Program ini juga menerima penyertaan bagi mana-mana individu yang ingin menjelaskan hutang Kaffarah dan Fidyah."
+    }
+  },
+  "kerjaKami": {
+    "newsEyebrow": "Berita & Artikel",
+    "newsTitle": "Berita Terkini",
+    "portfolioTitle": "Portfolio 12 Tahun Pengalaman",
+    "portfolioP1": "Yayasan Infaq Malaysia (YIM) terlibat secara langsung dan tidak langsung di dalam program kebajikan dalam dan luar negara sejak 12 tahun lepas. Program berkenaan meliputi sektor kebajikan, pendidikan dan misi kemanusiaan. Keseluruhan pengalaman terkumpul dari ahli lembaga amanah adalah berjumlah lebih dari 50 tahun.",
+    "portfolioP2": "Kami menjemput lebih ramai sukarelawan dan para dermawan agar berganding bahu di dalam menghasilkan program yang lebih bersepadu dan bermanfaat kepada masyarakat.",
+    "portfolioListTitle": "Antara Portfolio Program:",
+    "portfolio1Label": "Pelajar Malaysia (2013-2019):",
+    "portfolio1Desc": "Program Biasiswa Pendidikan Menengah.",
+    "portfolio2Label": "Agihan Qurban Antarabangsa:",
+    "portfolio2Desc": "Aceh (2016), Zamboanga (2017), Nepal (2018), Afrika Selatan (2020), Tanzania (2019-2022).",
+    "portfolio3Label": "Qurban Selangor (2022):",
+    "portfolio3Desc": "Kerjasama dengan Jabatan Agama Islam Selangor, mengagihkan 240kg daging kepada 239 asnaf kanak-kanak.",
+    "iframeAlt": "Browser Anda tidak mendukung iframe.",
+    "iframeLink": "Klik di sini untuk melihat PDF."
+  },
+  "sertaiKami": {
+    "pageTitle": "Sertai Misi Kami",
+    "pageSubtitle": "Setiap sumbangan, sama ada dalam bentuk dana atau masa, adalah nadi yang menggerakkan usaha kami untuk membantu golongan asnaf. Mari bersama kami membina masa depan yang lebih cerah.",
+    "korporat": {
+      "eyebrow": "Untuk Syarikat",
+      "title": "Menjadi Penaja Korporat",
+      "p1": "Tanggungjawab Sosial Korporat (CSR) adalah peluang untuk syarikat anda menyumbang kepada masyarakat. Kami di YIM sedia membantu menyalurkan sumbangan atau tajaan anda terus kepada anak-anak asnaf yang memerlukan.",
+      "p2Start": "Kami menjemput tajaan dari syarikat pelbagai saiz. Sumbangan anda, sama ada dalam bentuk ",
+      "p2Highlight": "tajaan sekali (one-off), bulanan, tajaan program, atau melalui Wakalah Zakat",
+      "p2End": ", akan kami uruskan dengan telus dan amanah.",
+      "taxTitle": "Pengecualian Cukai Disediakan",
+      "taxDesc": "Resit pengecualian cukai disediakan untuk sumbangan RM5,000 dan ke atas.",
+      "impakTitle": "Impak Bersama",
+      "impakDesc": "Wujudkan perubahan sosial yang mampan melalui kerjasama strategik.",
+      "btnHubungi": "Hubungi Kami"
+    },
+    "sukarelawan": {
+      "eyebrow": "Jadilah Harapan",
+      "title": "Sertai Pasukan Sukarelawan",
+      "subtitle": "Setiap titik peluh yang anda sumbangkan bersama YIM amatlah bermakna dan besar nilainya di sisi Asnaf. Tenaga dan masa anda adalah anugerah yang tidak ternilai.",
+      "card1Title": "Program KL & Selangor",
+      "card1Desc": "Bantu kami secara langsung dalam menjayakan program dan aktiviti di lapangan.",
+      "card2Title": "Perwakilan Negeri/Daerah",
+      "card2Desc": "Jadi wakil YIM di kawasan anda dan perluaskan lagi jaringan bantuan.",
+      "card3Title": "Kutipan Dana",
+      "card3Desc": "Sertai kempen kutipan dana kami untuk memastikan kelestarian program.",
+      "card4Title": "Multimedia",
+      "card4Desc": "Sumbangkan bakat kreatif anda dalam fotografi, video dan penulisan.",
+      "formNote": "Sila kongsikan latar belakang dan pengalaman anda agar kami dapat memberikan tugasan yang paling sesuai. Klik pautan di bawah untuk mendaftar.",
+      "btnDaftar": "Isi Borang Sukarelawan"
+    }
+  },
+  "blogPage": {
+    "title": "Blog"
+  },
+  "footer": {
+    "tagline": "\"Semuanya Untuk Asnaf\" — Misi kami adalah membasmi kemiskinan dan memperkasakan asnaf melalui sistem bantuan yang telus.",
+    "pautanTitle": "Pautan",
+    "bantuanTitle": "Bantuan",
+    "hubungiTitle": "Hubungi",
+    "kenaliKami": "Kenali Kami",
+    "programUtama": "Program Utama",
+    "kerjaKami": "Kerja Kami",
+    "sertaiKami": "Sertai Kami",
+    "pendidikan": "Pendidikan",
+    "kebajikan": "Kebajikan",
+    "danaKhas": "Dana Khas",
+    "zakat": "Zakat",
+    "alamat": "T3-03-03, Menara 3 Maju Link, Jln Lingkaran Tengah 2, Bandar Tasik Selatan, 57000 Kuala Lumpur",
+    "copyright": "Copyrights 2026 © Yayasan Infaq Malaysia (YIM)",
+    "dasarPrivasi": "Dasar Privasi",
+    "terma": "Terma & Syarat"
+  }
+}

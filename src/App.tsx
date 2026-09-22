@@ -475,7 +475,7 @@ export default function App() {
       {/* Floating WA Button */}
       <div className="fixed bottom-10 right-10 z-50">
         <a 
-          href="https://wa.me/60199999468" 
+          href="https://wa.me/60174277751" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:rotate-12 transition-all group"
